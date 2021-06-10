@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>gites</title>
 </head>
-<body>
+    <body>
         <!-- header -->
 
         <header>
@@ -18,22 +18,31 @@
                 <button>Appartement</button>
                 <button>Maison</button>
 
-
             </div>
 
             <div class="accueil">
 
-            <form action="">
-                <input type="search" placeholder="Rechercher un lieu">
-                <button type="submit"><img src="img/loupe.png" width="30px" height="30px" alt=""></button>
-            </form>
+                <form action="">
+                    <input type="search" placeholder="Rechercher un lieu">
+                    <button type="submit"><img src="img/loupe.png" width="30px" height="30px" alt=""></button>
+                </form>
             
             </div>
-
 
         </header>
 
         <!-- fin header -->
+
+        <section class="titre">
+
+            <div class="title">
+                <h1>Découvrez nos logements</h1>
+            </div>  
+            <hr>
+
+
+        </section>
     
-</body>
+        
+    </body>
 </html>

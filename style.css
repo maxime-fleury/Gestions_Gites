@@ -75,6 +75,7 @@ header{
     font-size: 1.3em;
 
 }
+
 input:focus{
     outline:none;
 }
@@ -84,12 +85,27 @@ input:focus{
     cursor: pointer;
     margin-left: -60px;
     margin-top:100px;
-
 }
 
+/* SECTION TITRE */
 
-/* div{
-    border: 1px solid red;
+.title {
+    font-size: 2em;
+    margin-top: 260px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--color4);
+}
+
+hr{
+    width:40%;
+    height:1px;
+    border: 1px solid var(--color3);
+}
+
+div{
+    /* border: 1px solid red; */
 
 
-} */
+}
