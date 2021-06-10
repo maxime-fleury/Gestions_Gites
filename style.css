@@ -104,8 +104,39 @@ hr{
     border: 1px solid var(--color3);
 }
 
+.gites {
+    height:auto ;
+    width:100%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+    background-color: grey;
+}
+
+.gite {
+    margin-top: 20px;
+    height: 500px;
+    width:350px;
+    border-radius: 15px;
+    background-color: white;
+   
+}
+
+.gite .photo {
+    height:250px;
+    width:100%;
+    border-top-left-radius:15px;
+    border-top-right-radius: 15px;
+    background-image: url('img/gite1p1.jpg');
+    background-position: center;
+}
+.photo img {
+    border-top-left-radius:15px;
+    border-top-right-radius: 15px;
+}
+
 div{
-    /* border: 1px solid red; */
+    border: 1px solid red;
 
 
 }

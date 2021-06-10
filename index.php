@@ -8,7 +8,7 @@
     <title>gites</title>
 </head>
     <body>
-        <!-- header -->
+        <!-- HEADER -->
 
         <header>
 
@@ -31,18 +31,44 @@
 
         </header>
 
-        <!-- fin header -->
+        <!-- FIN HEADER -->
 
-        <section class="titre">
+        <!-- TITRE -->
 
             <div class="title">
                 <h1>Découvrez nos logements</h1>
             </div>  
             <hr>
 
+        <!-- FIN TITRE -->
+
+        <!-- SECTION LOGEMENTS -->
+
+        <section class="logement">
+
+            <div class="gites">
+                
+
+                <div class="gite">
+                    <div class="photo">
+                        <img src="img/gite1p1.jpg" height="250px" width="350px">
+                    </div>
+                    <div class="logos"></div>
+                    <div class="descript"></div>
+                </div>
+
+                <div class="gite">
+                    <p>test2</p>
+                </div>
+
+                <div class="gite">
+                    <p>test3</p>
+                </div>
+
+            </div>
 
         </section>
-    
-        
+
     </body>
+
 </html>
