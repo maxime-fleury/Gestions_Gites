@@ -51,19 +51,136 @@
 
                 <div class="gite">
                     <div class="photo">
-                        <img src="img/gite1p1.jpg" height="250px" width="350px">
+                        <img src="img/gite1p1.jpg" height="250px" width="310px">
                     </div>
-                    <div class="logos"></div>
-                    <div class="descript"></div>
+                    <div class="logos">
+                        <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
+                        <div class="logo"><img src="img/user-group.png" height="30px" width="30px"><p>2</p></div>
+                        <div class="logo"><img src="img/bathtub.png" height="30px" width="30px"><p>1</p></div>
+                        <div class="logo"><img src="img/swimming.png" height="30px" width="30px"><p>non</p></div>
+                        <div class="logo"><img src="img/dog.png" height="30px" width="30px"><p>non</p></div>
+                        <div class="logo"><img src="img/wifi.png" height="30px" width="30px"><p>oui</p></div>
+
+                    </div>
+
+                    <div class="descript"><h2>Nevers</h2><p>A partir de 60€ par jour</p></div>
+                    <div class="zoom">
+                        <button>Voir le logement</button>
+                    </div>
+
+                    
                 </div>
 
                 <div class="gite">
-                    <p>test2</p>
+                    <div class="photo">
+                        <img src="img/gite2p1.jpg" height="250px" width="310px">
+                    </div>
+                    <div class="logos">
+                        <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
+                        <div class="logo"><img src="img/user-group.png" height="30px" width="30px"><p>2</p></div>
+                        <div class="logo"><img src="img/bathtub.png" height="30px" width="30px"><p>1</p></div>
+                        <div class="logo"><img src="img/swimming.png" height="30px" width="30px"><p>non</p></div>
+                        <div class="logo"><img src="img/dog.png" height="30px" width="30px"><p>non</p></div>
+                        <div class="logo"><img src="img/wifi.png" height="30px" width="30px"><p>oui</p></div>
+
+                    </div>
+
+                    <div class="descript"><h2>Nevers</h2><p>A partir de 60€ par jour</p></div>
+                    <div class="zoom">
+                        <button>Voir le logement</button>
+                    </div>
+
+                    
                 </div>
 
                 <div class="gite">
-                    <p>test3</p>
+                    <div class="photo">
+                        <img src="img/gite3p1.jpg" height="250px" width="310px">
+                    </div>
+                    <div class="logos">
+                        <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
+                        <div class="logo"><img src="img/user-group.png" height="30px" width="30px"><p>2</p></div>
+                        <div class="logo"><img src="img/bathtub.png" height="30px" width="30px"><p>1</p></div>
+                        <div class="logo"><img src="img/swimming.png" height="30px" width="30px"><p>non</p></div>
+                        <div class="logo"><img src="img/dog.png" height="30px" width="30px"><p>non</p></div>
+                        <div class="logo"><img src="img/wifi.png" height="30px" width="30px"><p>oui</p></div>
+
+                    </div>
+
+                    <div class="descript"><h2>Nevers</h2><p>A partir de 60€ par jour</p></div>
+                    <div class="zoom">
+                        <button>Voir le logement</button>
+                    </div>
+
+                    
                 </div>
+
+                <div class="gite">
+                    <div class="photo">
+                        <img src="img/gite4p1.jpg" height="250px" width="310px">
+                    </div>
+                    <div class="logos">
+                        <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
+                        <div class="logo"><img src="img/user-group.png" height="30px" width="30px"><p>2</p></div>
+                        <div class="logo"><img src="img/bathtub.png" height="30px" width="30px"><p>1</p></div>
+                        <div class="logo"><img src="img/swimming.png" height="30px" width="30px"><p>non</p></div>
+                        <div class="logo"><img src="img/dog.png" height="30px" width="30px"><p>non</p></div>
+                        <div class="logo"><img src="img/wifi.png" height="30px" width="30px"><p>oui</p></div>
+
+                    </div>
+
+                    <div class="descript"><h2>Nevers</h2><p>A partir de 60€ par jour</p></div>
+                    <div class="zoom">
+                        <button>Voir le logement</button>
+                    </div>
+
+                    
+                </div>
+
+                <div class="gite">
+                    <div class="photo">
+                        <img src="img/gite5p1.jpg" height="250px" width="310px">
+                    </div>
+                    <div class="logos">
+                        <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
+                        <div class="logo"><img src="img/user-group.png" height="30px" width="30px"><p>2</p></div>
+                        <div class="logo"><img src="img/bathtub.png" height="30px" width="30px"><p>1</p></div>
+                        <div class="logo"><img src="img/swimming.png" height="30px" width="30px"><p>non</p></div>
+                        <div class="logo"><img src="img/dog.png" height="30px" width="30px"><p>non</p></div>
+                        <div class="logo"><img src="img/wifi.png" height="30px" width="30px"><p>oui</p></div>
+
+                    </div>
+
+                    <div class="descript"><h2>Nevers</h2><p>A partir de 60€ par jour</p></div>
+                    <div class="zoom">
+                        <button>Voir le logement</button>
+                    </div>
+
+                    
+                </div>
+
+                <div class="gite">
+                    <div class="photo">
+                        <img src="img/gite6p1.jpg" height="250px" width="310px">
+                    </div>
+                    <div class="logos">
+                        <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
+                        <div class="logo"><img src="img/user-group.png" height="30px" width="30px"><p>2</p></div>
+                        <div class="logo"><img src="img/bathtub.png" height="30px" width="30px"><p>1</p></div>
+                        <div class="logo"><img src="img/swimming.png" height="30px" width="30px"><p>non</p></div>
+                        <div class="logo"><img src="img/dog.png" height="30px" width="30px"><p>non</p></div>
+                        <div class="logo"><img src="img/wifi.png" height="30px" width="30px"><p>oui</p></div>
+
+                    </div>
+
+                    <div class="descript"><h2>Nevers</h2><p>A partir de 60€ par jour</p></div>
+                    <div class="zoom">
+                        <button>Voir le logement</button>
+                    </div>
+
+                    
+                </div>
+
 
             </div>
 
