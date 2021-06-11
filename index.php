@@ -14,9 +14,9 @@
 
             <div class="head">
 
-                <button>Chambre</button>
-                <button>Appartement</button>
-                <button>Maison</button>
+                <button>Chambres</button>
+                <button>Appartements</button>
+                <button>Maisons</button>
 
             </div>
 
@@ -185,13 +185,29 @@
             </div>
 
         </section>
+        <!-- FIN LOGEMENT -->
 
+        <!-- FOOTER -->
+        
         <footer>
 
-            
+            <div class="foot">
+
+                <button>Chambres</button>
+                <button>Appartements</button>
+                <button>Maisons</button>
+                <img src="img/facebook.png" height="40px" width="40px">
+                <img src="img/twitter.png" height="40px" width="40px">
+                <img src="img/instagram.png" height="40px" width="40px">
+
+
+
+            </div>
 
 
         </footer>
+
+        <!-- FIN FOOTER -->
 
     </body>
 
