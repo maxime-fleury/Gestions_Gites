@@ -100,13 +100,9 @@ input:focus{
 
 hr{
     
-    width:40%;
+    width:70%;
     height:1px;
     border: 1px solid var(--color3);
-}
-
-.logement {
-  
 }
 
 .gites {
@@ -158,11 +154,11 @@ hr{
 .descript p {
     padding-left:50px;
 }
-div{
-    /* border: 1px solid red; */
+/* div{
+    border: 1px solid red;
 
 
-}
+} */
 
 .zoom{
     display: flex;
@@ -176,4 +172,9 @@ div{
     color: var(--color4);
     margin-top: 10px;
     border: 2px solid black;
+}
+
+.zoom button:hover{
+    background-color: var(--color2);
+    color:black;
 }

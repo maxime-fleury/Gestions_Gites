@@ -63,7 +63,7 @@
 
                     </div>
 
-                    <div class="descript"><h2>Nevers</h2><p>A partir de 60€ par jour</p></div>
+                    <div class="descript"><h2>Nevers</h2><p>A partir de 55€ par jour</p></div>
                     <div class="zoom">
                         <button>Voir le logement</button>
                     </div>
@@ -85,7 +85,7 @@
 
                     </div>
 
-                    <div class="descript"><h2>Nevers</h2><p>A partir de 60€ par jour</p></div>
+                    <div class="descript"><h2>Lyon</h2><p>A partir de 90€ par jour</p></div>
                     <div class="zoom">
                         <button>Voir le logement</button>
                     </div>
@@ -107,7 +107,7 @@
 
                     </div>
 
-                    <div class="descript"><h2>Nevers</h2><p>A partir de 60€ par jour</p></div>
+                    <div class="descript"><h2>Cannes</h2><p>A partir de 130€ par jour</p></div>
                     <div class="zoom">
                         <button>Voir le logement</button>
                     </div>
@@ -129,7 +129,7 @@
 
                     </div>
 
-                    <div class="descript"><h2>Nevers</h2><p>A partir de 60€ par jour</p></div>
+                    <div class="descript"><h2>Strasbourg</h2><p>A partir de 70€ par jour</p></div>
                     <div class="zoom">
                         <button>Voir le logement</button>
                     </div>
@@ -151,7 +151,7 @@
 
                     </div>
 
-                    <div class="descript"><h2>Nevers</h2><p>A partir de 60€ par jour</p></div>
+                    <div class="descript"><h2>Toulouse</h2><p>A partir de 80€ par jour</p></div>
                     <div class="zoom">
                         <button>Voir le logement</button>
                     </div>
@@ -173,7 +173,7 @@
 
                     </div>
 
-                    <div class="descript"><h2>Nevers</h2><p>A partir de 60€ par jour</p></div>
+                    <div class="descript"><h2>Monaco</h2><p>A partir de 300€ par jour</p></div>
                     <div class="zoom">
                         <button>Voir le logement</button>
                     </div>
@@ -185,6 +185,13 @@
             </div>
 
         </section>
+
+        <footer>
+
+            
+
+
+        </footer>
 
     </body>
 
