@@ -6,9 +6,9 @@
 --color2 : #79c99e;
 --color3 : rgba(0, 0, 0, 0.678);
 --color4 : rgb(247, 243, 243);
---color5 : #67DA3F;
---color6 : #DAC13F;
---color7 : #F02121;
+--color5 : #66da3fd5;
+--color6 : #dac03fdc;
+--color7 : #f02121d7;
 }
 
 * {
@@ -43,6 +43,10 @@ header{
     justify-content: flex-end;
     align-items: center;
     background-color: var(--color2);
+}
+.head img {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .head button{
@@ -150,7 +154,54 @@ hr{
 .photo img {
     border-top-left-radius:15px;
     border-top-right-radius: 15px;
+    
 }
+.chambre {
+    position: relative;
+    width: 150px;
+    height: 30px;
+    background-color: var(--color5);
+    margin-top:-226px;
+    margin-left: -32px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    transform: rotate(-45deg);
+    font-size: 1.2em;
+    font-family: 'Satisfy', cursive;   
+}
+.appart {
+    position: relative;
+    width: 150px;
+    height: 30px;
+    background-color: var(--color6);
+    margin-top:-226px;
+    margin-left: -32px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    transform: rotate(-45deg);
+    font-size: 1.2em;
+    font-family: 'Satisfy', cursive;   
+}
+.maison {
+    position: relative;
+    width: 150px;
+    height: 30px;
+    background-color: var(--color7);
+    margin-top:-226px;
+    margin-left: -32px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    transform: rotate(-45deg);
+    font-size: 1.2em;
+    font-family: 'Satisfy', cursive;   
+}
+.photo {
+    overflow: hidden;
+}
+
 .logos {
     display: flex;
     justify-content: space-around;
@@ -186,8 +237,11 @@ hr{
     border-radius: 15px;
     background-color: var(--color1);
     color: var(--color4);
-    margin-top: 10px;
+    margin-top: 5px;
     border: 2px solid black;
+    cursor: pointer;
+    height:30px;
+    font-size: 1.2em;
     
 }
 

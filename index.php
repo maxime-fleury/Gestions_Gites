@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/house.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>gites</title>
 </head>
@@ -12,8 +13,10 @@
 
         <header>
 
-            <div class="head">
+            
 
+            <div class="head">
+                <div><img src="img/house.png" height="60px" width="60px"></div>
                 <button>Chambres</button>
                 <button>Appartements</button>
                 <button>Maisons</button>
@@ -51,7 +54,10 @@
 
                 <div class="gite">
                     <div class="photo">
+
                         <img src="img/gite1p1.jpg" height="250px" width="310px">
+                        <div class="chambre">Chambre</div>
+
                     </div>
                     <div class="logos">
                         <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
@@ -63,7 +69,7 @@
 
                     </div>
 
-                    <div class="descript"><h2>Nevers</h2><p>A partir de 55€ par jour</p></div>
+                    <div class="descript"><h2>Nevers</h2><p>A partir de <b>55€</b> par jour</p></div>
                     <div class="zoom">
                         <button>Voir le logement</button>
                     </div>
@@ -74,6 +80,8 @@
                 <div class="gite">
                     <div class="photo">
                         <img src="img/gite2p1.jpg" height="250px" width="310px">
+                        <div class="appart">Appart</div>
+
                     </div>
                     <div class="logos">
                         <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
@@ -85,7 +93,7 @@
 
                     </div>
 
-                    <div class="descript"><h2>Lyon</h2><p>A partir de 90€ par jour</p></div>
+                    <div class="descript"><h2>Lyon</h2><p>A partir de <b>90€</b> par jour</p></div>
                     <div class="zoom">
                         <button>Voir le logement</button>
                     </div>
@@ -96,6 +104,8 @@
                 <div class="gite">
                     <div class="photo">
                         <img src="img/gite3p1.jpg" height="250px" width="310px">
+                        <div class="maison">Maison</div>
+
                     </div>
                     <div class="logos">
                         <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
@@ -107,7 +117,7 @@
 
                     </div>
 
-                    <div class="descript"><h2>Cannes</h2><p>A partir de 130€ par jour</p></div>
+                    <div class="descript"><h2>Cannes</h2><p>A partir de <b>130€</b> par jour</p></div>
                     <div class="zoom">
                         <button>Voir le logement</button>
                     </div>
@@ -118,6 +128,8 @@
                 <div class="gite">
                     <div class="photo">
                         <img src="img/gite4p1.jpg" height="250px" width="310px">
+                        <div class="chambre">Chambre</div>
+
                     </div>
                     <div class="logos">
                         <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
@@ -129,7 +141,7 @@
 
                     </div>
 
-                    <div class="descript"><h2>Strasbourg</h2><p>A partir de 70€ par jour</p></div>
+                    <div class="descript"><h2>Strasbourg</h2><p>A partir de <b>70€</b> par jour</p></div>
                     <div class="zoom">
                         <button>Voir le logement</button>
                     </div>
@@ -140,6 +152,8 @@
                 <div class="gite">
                     <div class="photo">
                         <img src="img/gite5p1.jpg" height="250px" width="310px">
+                        <div class="appart">Appart</div>
+
                     </div>
                     <div class="logos">
                         <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
@@ -151,7 +165,7 @@
 
                     </div>
 
-                    <div class="descript"><h2>Toulouse</h2><p>A partir de 80€ par jour</p></div>
+                    <div class="descript"><h2>Toulouse</h2><p>A partir de <b>80€</b> par jour</p></div>
                     <div class="zoom">
                         <button>Voir le logement</button>
                     </div>
@@ -162,6 +176,8 @@
                 <div class="gite">
                     <div class="photo">
                         <img src="img/gite6p1.jpg" height="250px" width="310px">
+                        <div class="maison">Maison</div>
+
                     </div>
                     <div class="logos">
                         <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
@@ -173,7 +189,7 @@
 
                     </div>
 
-                    <div class="descript"><h2>Monaco</h2><p>A partir de 300€ par jour</p></div>
+                    <div class="descript"><h2>Monaco</h2><p>A partir de <b>300€</b> par jour</p></div>
                     <div class="zoom">
                         <button>Voir le logement</button>
                     </div>
