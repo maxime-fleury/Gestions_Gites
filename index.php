@@ -50,20 +50,51 @@
         <section class="logement">
 
             <div class="view">
-
+                
                 <div class="font">
-                    <div class="photo">
 
-                        <img src="img/gite1p1.jpg" height="250px" width="310px">
-                        <img src="img/gite1p1.jpg" height="250px" width="310px">
-                        <img src="img/gite1p1.jpg" height="250px" width="310px">
-                        <img src="img/gite1p1.jpg" height="250px" width="310px">
+                    
+                    <div class="pic">
+                        <h2>Nevers</h2>
+                        <p><b>Logement entier</b><br>Vous aurez la chambre rien que pour vous.</p>
+                        <p><b>Arrivée autonome</b><br> Vous pouvez entrer dans les lieux avec une boîte à clé sécurisée.</p>
+                        <p><b>Nettoyage renforcé</b><br>Cet hôte s'engage à appliquer le processus de nettoyage renforcé.</p>
+                            <br>
+                            <hr>
+                            <br>
+                        <form action="">
+                            <h2><b>60€</b>/nuit</h2>
 
-                        <div class="chambre">Chambre</div>
+                            <label for="">Du :</label>
+                            <input type="date" name="" id="">
 
+                            <label for="">Au :</label>
+                            <input type="date" name="" id="">
+
+                            <br>
+                            <input type="number" placeholder="Nombre de personnes" name="" id="">
+
+                            <h2>Résumé de votre réservation :<br><br>
+                                2 nuits à 60€
+                            </h2>
+                            <h2><b>Total :</b>&nbsp;&nbsp;<mark>120€</mark></h2>
+                        
+                        </form>
+
+                        
                     </div>
-
+                    <img src="img/gite2p1.jpg" width="45%" height="50%" 
+                    alt="">
                     <div class="rond">X</div>
+                    <!-- <div class="formulaire">
+                        <form action="">
+                            <input type="date">
+
+
+                        </form>
+                    </div> -->
+
+                    
                    
                 </div>
 
