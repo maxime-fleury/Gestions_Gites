@@ -49,6 +49,28 @@
 
         <section class="logement">
 
+            <div class="view">
+
+                <div class="font">
+                    <div class="photo">
+
+                        <img src="img/gite1p1.jpg" height="250px" width="310px">
+                        <img src="img/gite1p1.jpg" height="250px" width="310px">
+                        <img src="img/gite1p1.jpg" height="250px" width="310px">
+                        <img src="img/gite1p1.jpg" height="250px" width="310px">
+
+                        <div class="chambre">Chambre</div>
+
+                    </div>
+
+                    <div class="rond">X</div>
+                   
+                </div>
+
+
+
+            </div>
+
             <div class="gites">
                 
 
@@ -191,7 +213,7 @@
 
                     <div class="descript"><h2>Monaco</h2><p>A partir de <b>300€</b> par jour</p></div>
                     <div class="zoom">
-                        <button>Voir le logement</button>
+                        <button class="btn">Voir le logement</button>
                     </div>
 
                     
@@ -224,7 +246,7 @@
         </footer>
 
         <!-- FIN FOOTER -->
-
+            <script src="main.js"></script>
     </body>
 
 </html>

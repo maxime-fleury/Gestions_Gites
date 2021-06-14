@@ -124,6 +124,53 @@ hr{
     border: 1px solid var(--color3);
 }
 
+/* SECTION LOGEMENT */
+
+/* VIEW ZOOM */
+
+.view {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.font {
+    background-color: white;
+    height:95%;
+    width:90%;
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid red;
+    border-radius: 15px;
+}
+
+.rond {
+    color: white;
+    font-size: 1.4em;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 50%;
+    height:40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    margin: 5px;
+    
+}
+
+
+
+
+
+
+
+
+/* Gites */
 .gites {
     flex-wrap: wrap;
     gap: 20px;
