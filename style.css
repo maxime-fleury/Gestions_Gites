@@ -148,7 +148,6 @@ hr{
 }
 
 .pic form{
-    border: 1px solid red;
     padding-top: 40px;
     padding-bottom: 40px;
     display: flex;
@@ -185,10 +184,25 @@ mark {
     
 }
 
+form button {
+    border-radius: 15px;
+    background-color: var(--color1);
+    color: var(--color4);
+    margin-top: 5px;
+    border: none;
+    cursor: pointer;
+    height:30px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    
+}
 
 
 
 
+div {
+    /* border: 1px solid red; */
+}
 
 
 

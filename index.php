@@ -78,6 +78,7 @@
                                 2 nuits à 60€
                             </h2>
                             <h2><b>Total :</b>&nbsp;&nbsp;<mark>120€</mark></h2>
+                            <button type="submit">Réserver</button>
                         
                         </form>
 
