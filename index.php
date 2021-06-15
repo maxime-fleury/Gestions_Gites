@@ -6,52 +6,6 @@ include $inc_path . "connexion.php";
 ?>
 
 
-
-=======
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/house.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>gites</title>
-</head>
-    <body>
->>>>>>> asbranch
-
-        <!-- HEADER -->
-
-<<<<<<< HEAD
-<?php
-include $inc_path . "footer.php";
-?>
-=======
-        <header>
-
-            <div class="head">
-
-                <div><img src="img/house.png" height="60px" width="60px"></div>
-                <button>Chambres</button>
-                <button>Appartements</button>
-                <button>Maisons</button>
-
-            </div>
-
-            <div class="accueil">
-
-                <form action="">
-                    <input type="search" placeholder="Rechercher un lieu">
-                    <button type="submit"><img src="img/loupe.png" width="30px" height="30px" alt=""></button>
-                </form>
-            
-            </div>
-
-        </header>
-
-        <!-- FIN HEADER -->
-
         <!-- TITRE -->
 
             <div class="title">
