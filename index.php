@@ -9,13 +9,13 @@
     <title>gites</title>
 </head>
     <body>
+
         <!-- HEADER -->
 
         <header>
 
-            
-
             <div class="head">
+
                 <div><img src="img/house.png" height="60px" width="60px"></div>
                 <button>Chambres</button>
                 <button>Appartements</button>
@@ -39,8 +39,11 @@
         <!-- TITRE -->
 
             <div class="title">
+
                 <h1>Découvrez nos logements</h1>
-            </div>  
+
+            </div>
+
             <hr>
 
         <!-- FIN TITRE -->
@@ -87,6 +90,7 @@
 
                         <img src="img/gite2p1.jpg" width="100%" height="50%">
                             <div class="logos">
+
                                 <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
                                 <div class="logo"><img src="img/user-group.png" height="30px" width="30px"><p>2</p></div>
                                 <div class="logo"><img src="img/bathtub.png" height="30px" width="30px"><p>1</p></div>
@@ -95,23 +99,20 @@
                                 <div class="logo"><img src="img/wifi.png" height="30px" width="30px"><p>oui</p></div>
 
                             </div>
+
                             <div class="slide">
 
                                 <img src="img/gite2p2.jpg" alt="" height="220px" width="250px">
                                 <img src="img/gite2p3.jpg" alt="" height="220px" width="250px">
                                 <img src="img/gite2p4.jpg" alt="" height="220px" width="250px">
+
                             </div>
 
                     </div>
 
-                    
-                    <div class="rond">X</div>
-    
-                    
+                    <div class="rond">X</div>                    
                    
                 </div>
-
-
 
             </div>
 
@@ -119,12 +120,14 @@
                 
 
                 <div class="gite">
+
                     <div class="photo">
 
                         <img src="img/gite1p1.jpg" height="250px" width="310px">
                         <div class="chambre">Chambre</div>
 
                     </div>
+
                     <div class="logos">
                         <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
                         <div class="logo"><img src="img/user-group.png" height="30px" width="30px"><p>2</p></div>
@@ -137,19 +140,24 @@
 
                     <div class="descript"><h2>Nevers</h2><p>A partir de <b>55€</b> par jour</p></div>
                     <div class="zoom">
-                        <button>Voir le logement</button>
-                    </div>
 
+                        <button>Voir le logement</button>
+
+                    </div>
                     
                 </div>
 
                 <div class="gite">
+
                     <div class="photo">
+
                         <img src="img/gite2p1.jpg" height="250px" width="310px">
                         <div class="appart">Appart</div>
 
                     </div>
+
                     <div class="logos">
+
                         <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
                         <div class="logo"><img src="img/user-group.png" height="30px" width="30px"><p>2</p></div>
                         <div class="logo"><img src="img/bathtub.png" height="30px" width="30px"><p>1</p></div>
@@ -163,17 +171,20 @@
                     <div class="zoom">
                         <button>Voir le logement</button>
                     </div>
-
                     
                 </div>
 
                 <div class="gite">
+
                     <div class="photo">
+
                         <img src="img/gite3p1.jpg" height="250px" width="310px">
                         <div class="maison">Maison</div>
 
                     </div>
+
                     <div class="logos">
+
                         <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
                         <div class="logo"><img src="img/user-group.png" height="30px" width="30px"><p>2</p></div>
                         <div class="logo"><img src="img/bathtub.png" height="30px" width="30px"><p>1</p></div>
@@ -187,17 +198,20 @@
                     <div class="zoom">
                         <button>Voir le logement</button>
                     </div>
-
-                    
+                  
                 </div>
 
                 <div class="gite">
+
                     <div class="photo">
+
                         <img src="img/gite4p1.jpg" height="250px" width="310px">
                         <div class="chambre">Chambre</div>
 
                     </div>
+
                     <div class="logos">
+
                         <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
                         <div class="logo"><img src="img/user-group.png" height="30px" width="30px"><p>2</p></div>
                         <div class="logo"><img src="img/bathtub.png" height="30px" width="30px"><p>1</p></div>
@@ -211,17 +225,20 @@
                     <div class="zoom">
                         <button>Voir le logement</button>
                     </div>
-
                     
                 </div>
 
                 <div class="gite">
+
                     <div class="photo">
+
                         <img src="img/gite5p1.jpg" height="250px" width="310px">
                         <div class="appart">Appart</div>
 
                     </div>
+
                     <div class="logos">
+
                         <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
                         <div class="logo"><img src="img/user-group.png" height="30px" width="30px"><p>2</p></div>
                         <div class="logo"><img src="img/bathtub.png" height="30px" width="30px"><p>1</p></div>
@@ -235,17 +252,20 @@
                     <div class="zoom">
                         <button>Voir le logement</button>
                     </div>
-
                     
                 </div>
 
                 <div class="gite">
+
                     <div class="photo">
+
                         <img src="img/gite6p1.jpg" height="250px" width="310px">
                         <div class="maison">Maison</div>
 
                     </div>
+
                     <div class="logos">
+
                         <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p>1</p></div>
                         <div class="logo"><img src="img/user-group.png" height="30px" width="30px"><p>2</p></div>
                         <div class="logo"><img src="img/bathtub.png" height="30px" width="30px"><p>1</p></div>
@@ -259,10 +279,8 @@
                     <div class="zoom">
                         <button class="btn">Voir le logement</button>
                     </div>
-
                     
                 </div>
-
 
             </div>
 
@@ -282,15 +300,14 @@
                 <img src="img/twitter.png" height="40px" width="40px">
                 <img src="img/instagram.png" height="40px" width="40px">
 
-
-
             </div>
-
 
         </footer>
 
         <!-- FIN FOOTER -->
+
             <script src="main.js"></script>
+            
     </body>
 
 </html>
