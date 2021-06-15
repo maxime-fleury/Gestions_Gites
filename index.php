@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php 
 $inc_path = "./inc/";
 include $inc_path . "header.php";
