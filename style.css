@@ -151,6 +151,8 @@ hr{
     padding-top: 40px;
     padding-bottom: 40px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;    
     background-color:var(--color2);
     border-radius: 15px;
@@ -159,7 +161,24 @@ hr{
 mark {
     background-color: white;
 }
+.pic input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px dashed black;
+    margin-top: 5px;
+    width:50%;
+   
+}
 
+.slider {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    margin-top: 20px;
+}
+.slide {
+    margin-top: -10px;
+}
 .formulaire {
     display: flex;
 }
@@ -168,7 +187,21 @@ mark {
     margin-top: 10px;
 }
 
+.font .logos img {
+    border: none;
+}
+.font .logos {
+    background-color: var(--color2);
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .rond {
+    position: relative;
     color: white;
     font-size: 1.4em;
     cursor: pointer;
@@ -196,14 +229,6 @@ form button {
     margin-bottom: 10px;
     
 }
-
-
-
-
-div {
-    /* border: 1px solid red; */
-}
-
 
 
 /* Gites */
