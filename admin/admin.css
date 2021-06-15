@@ -1,0 +1,63 @@
+body{
+    color:white;
+    background:var(--bs-dark);
+}
+    input[type=number]{
+        width:4em;
+    }
+    input[type="submit"] {
+        display: block;
+        width: 150px;
+        margin: 0 0 20px;
+        padding: 8px 0 10px 0;
+        text-align: center;
+        border: 1px solid rgba(0,0,0,.5);
+        background: rgba(0,0,0,.25);
+    }
+    textarea {
+        display: block;
+        width: 150px;
+        height: 80px;
+        margin: 0 0 5px;
+        padding: 8px 12px 10px 12px;
+        border: 1px solid rgba(0,0,0,.5);
+        background: rgba(0,0,0,.25);
+    
+    }
+    input[type="text"],input[type="number"],input[type="file"],select,button, select option[value='Chambre'], select option[value='Appartement'], select option[value='Maison']{
+        color:white;
+padding: 8px 12px 10px 12px;
+border: 1px solid rgba(0,0,0,.5);
+background: rgba(0,0,0,.25)!important;
+}
+input[type="text"]{
+width:150px;
+}
+textarea {
+font-family: inherit;
+font-size: 100%;
+vertical-align: baseline;
+border: 0;
+outline: 0;
+color: #fff;
+}
+.small-image{
+width:100px;
+}
+    input{
+        color:white;
+        background-color:var(--bs-dark);
+    }
+    td{
+        text-align:center;
+    }
+    #disconnect{
+        position:relative;
+        right:0;
+        padding:5px;
+        background-color:indigo;
+        color:white;
+    }
+    #disconnect:hover,#disconnect:focus{
+        background-color:blue;
+    }
