@@ -165,7 +165,7 @@ include $inc_path . "connexion.php";
 
                     <div class="descript"><h2>Cannes</h2><p>A partir de <b>130€</b> par jour</p></div>
                     <div class="zoom">
-                        <button>Voir le logement</button>
+                        <button id="test">Voir le logement</button>
                     </div>
                   
                 </div>
@@ -246,7 +246,7 @@ include $inc_path . "connexion.php";
 
                     <div class="descript"><h2>Monaco</h2><p>A partir de <b>300€</b> par jour</p></div>
                     <div class="zoom">
-                        <button id="test">Voir le logement</button>
+                        <button>Voir le logement</button>
                     </div>
                     
                 </div>

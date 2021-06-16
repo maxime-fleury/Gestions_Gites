@@ -6,7 +6,9 @@ test.addEventListener('click', changeDiv);
 
 
 function changeDiv(){
-    view.setAttribute ("style" , "display:block");
+    view.setAttribute ("style" , "display:flex");
+    
+
 }
 
 rond.addEventListener('click', closeWindow);
