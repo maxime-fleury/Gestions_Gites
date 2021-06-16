@@ -14,6 +14,6 @@ function changeDiv(){
 rond.addEventListener('click', closeWindow);
 
 function closeWindow(){
-    view.setAttribute ("style" , "display:none");
+    view.setAttribute ("style" , "display:none; animation:out 3s ease 0s 1 normal forwards");
 }
 

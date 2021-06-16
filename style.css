@@ -138,7 +138,9 @@ hr {
     margin-bottom: -100vh;
     position: sticky;
     z-index: 20;
-    animation : entrance 3s ease 0s  1 normal forwards;
+    animation : entrance 3s ease 0s 1 normal forwards;
+    
+
 
 }
 
@@ -153,6 +155,21 @@ hr {
       opacity: 1;
       transform: scale(250px);
       z-index: 20;
+    }
+    
+  }
+
+  @keyframes out {
+    0% {
+      opacity: 0;
+      transform: scale(250px);
+      z-index: 20;
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale(250px);
+      z-index: -1;
     }
     
   }
