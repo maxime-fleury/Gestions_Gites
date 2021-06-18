@@ -28,8 +28,6 @@ setTimeout(function(){
 $inc_path = "../inc/";
 session_start();
 if(isset($_SESSION['connecte'])){
-    //il est co, la page ici....
-    include $inc_path . "header.php";
     include $inc_path . "connexion.php";
     include $inc_path . "hebergement.php";
     if(isset($_POST['action'])){
@@ -279,6 +277,4 @@ else{
     header('Location: ./index.php');
 }
 ?>
-<a id='disconnect' href='index.php?disconnect=1'>Deconnexion</a>
-
-<?php include  $inc_path . "footer.php";
+<a id='disconnect' href='index.php?disconnect=1'>Se déconnecter</a>
