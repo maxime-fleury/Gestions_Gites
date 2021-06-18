@@ -123,33 +123,171 @@ hr {
     border: 1px solid var(--color3);
 }
 
+/* FIN SECTION TITRE */
+
 /* SECTION LOGEMENT */
 
-/* VIEW ZOOM */
+    /* VIEW ZOOM */
 
 .view {
-    background-color: rgba(0, 0, 0, 0.747);
+    background-color: rgba(0, 0, 0, 0.747); 
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     display: none;
+    margin-bottom: -100vh;
+    position: sticky;
+    z-index: 20;
+    animation : entrance 3s ease 0s 1 normal forwards;
 }
 
+@keyframes entrance {
+    0% {
+      opacity: 0;
+      transform: scale(0px);
+      z-index: -1;
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale(250px);
+      z-index: 20;
+    }
+    
+}
+
+@keyframes out {
+    0% {
+      opacity: 0;
+      transform: scale(250px);
+      z-index: 20;
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale(250px);
+      z-index: -1;
+    }
+    
+}
+
+
 .font {
-    background-color: white;
+    background-color: var(--color4);
     height:95%;
     width:90%;
     display: flex;
-    justify-content: space-between;
     border-radius: 15px;
-    padding-left: 50px;
 }
+
+/* test defilement images */
+
+.description img{
+    max-width: 100%;   
+}
+    
+    /*pour le saut de page, on cree une class que l'on met en display:none*/
+
+.target{
+    display: none;
+}  
+    
+    /* englobe le slider */
+    
+.cadre_diapo{    
+    max-width: 600px;
+    margin: 2rem auto;
+    overflow: hidden;
+    justify-content: flex-end;
+    box-shadow: 0px 2px 20px 5px var(--color3);
+    border-radius: 15px;       
+}
+    
+.interieur_diapo{        
+    display: flex;
+    width: 400%;
+    transition: transform .6s ease-in-out       
+}
+    
+.description{   
+    position: relative;
+}
+    
+.description span{    
+    position: absolute;
+    left: 0;
+    top: 2%;
+    font-size: 75%;
+    display: flex;
+    padding: .5rem;
+    justify-content: center;
+    color: white;
+    background: hsla(0,0%,0%,.35)       
+}
+        
+        
+#id1:target ~ .cadre_diapo .interieur_diapo{   
+    transform:translatex(0)   
+}/*image 1*/
+    
+#id2:target ~ .cadre_diapo .interieur_diapo{   
+    transform:translatex(-25%)   
+}/*image 2*/
+    
+#id3:target ~ .cadre_diapo .interieur_diapo{   
+    transform:translatex(-50%)    
+}/*image 3*/
+    
+#id4:target ~ .cadre_diapo .interieur_diapo{   
+    transform:translatex(-75%)   
+}/*image 4*/  
+    
+    /*navigation avec images miniatures*/
+
+.navigation_diapo{       
+    display: flex; /*permet d'aligner les photos les unes à la suite des autres, on peut aussi utiliser le positionnement absolu*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0       
+}
+    
+.navigation_diapo li {   
+    padding: .25rem;
+}
+    
+.navigation_diapo img{   
+    border: 3px solid white;
+    box-shadow:0 0 5px hsla(0,0%,0%,.4);
+}
+
+.navigation_diapo img:hover{
+    border: 3px solid var(--color2);
+}
+
+.localisation {
+    padding-left: 20px;
+}
+        
+        
+    @media (min-width:31.25rem){
+            
+        .description span{
+                
+            font-size: initial
+            
+        }
+        
+    }
+
+/* fin test defilement images */
 
 .pic form{
     padding-top: 40px;
     padding-bottom: 40px;
+    width:400px;
+    height:650px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,6 +295,14 @@ hr {
     background-color:var(--color2);
     border-radius: 15px;
     padding: 5px;
+    box-shadow: 0px 2px 20px 5px var(--color3);
+}
+
+.pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
 }
 
 mark {
@@ -167,36 +313,22 @@ mark {
     background-color: transparent;
     border: none;
     border-bottom: 1px dashed black;
-    margin-top: 5px;
+    margin-top: 10px;
     width:50%;   
-}
-
-.slider {
-    display: flex;
-    /* justify-content: center; */
-    flex-direction: column;
-    margin-top: 20px;
-}
-
-.slide {
-    margin-top: -10px;
 }
 
 .formulaire {
     display: flex;
 }
 
-.font img {
-    border: 10px solid black;
-    margin-top: 10px;
-}
-
 .font .logos img {
     border: none;
+    outline: none;
 }
 
 .font .logos {
     background-color: var(--color2);
+    height:60px;    
 }
 
 .slide {
@@ -232,7 +364,6 @@ form button {
     font-size: 1.2em;
     margin-bottom: 10px;    
 }
-
 
 /* Gites */
 

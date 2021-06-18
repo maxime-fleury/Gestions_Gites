@@ -1,8 +1,8 @@
 <?php
 
-$dsn = 'mysql:dbname=gite;host=localhost';
+$dsn = 'mysql:host=localhost';
 $user = 'root';
-$password = "password123";
-$host_name = "http://xill.tk";
+$password = "";
+
 
 $dbh = new PDO($dsn, $user, $password);
