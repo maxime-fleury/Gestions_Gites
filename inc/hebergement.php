@@ -62,7 +62,7 @@ class hebergement{
 			if($this->nb_sallebain > 0)
 				echo "<br>Nb salle de bain:" . $this->nb_sallebain;
 			echo "<br> Lieu: " . $this->lieu . "<br> Prix: " . $this->prix;
-		}	
+		}
 
 }
 class chambre extends hebergement{
