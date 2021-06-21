@@ -16,11 +16,11 @@ setTimeout(function(){
     if(nb_personne && prix_base){
         //if(nb_nuits)
         nb_personne.addEventListener("input", function(){
-            if(nb_personne.value != "")
-            if(prix_total){
+            if(nb_personne.value != ""){
                 if(!isNaN(nb_personne.value)){
-                    if(nb_personne.value > nb_personne.max)
+                    if(parseInt(nb_personne.value) > parseInt(nb_personne.max)){
                         nb_personne.value = nb_personne.max;
+                    }
                     prix_total.value = calcPrix(date_debut, date_fin, nb_personne.value, prix_base.value);
                 }
             }

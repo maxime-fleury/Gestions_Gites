@@ -26,24 +26,20 @@ include $inc_path . "hebergement.php";
 
             <div class="gites">
             <?php
-                $statement = "select * from hebergement";
+                /*$statement = "select * from hebergement";
                 $m = $dbh->prepare($statement);
                 $m->execute();
-                while($r = $m->fetch()){
+                while($r = $m->fetch()){*/
+                $collec = new hebergements($dbh);
+                for($i = 0; $i < $collec->getNbHebergs(); $i++){
         ?>
                 <div class="gite">
 
                     <div class="photo">
                     <?php
-                        $id = $r['id'];
-                        $statement = "select * from image where id_heberg=$id limit 1";
-                        $q = $dbh->prepare($statement);
-                        $q->execute();
-                        while($s = $q->fetch()){
                             echo '
-                            <img src="img/' . $s["image"] . '" height="250px" width="310px">
-                            <div class="' . strtolower($r['type']) . '">' . strtolower($r['type']) . '</div>';
-                        }
+                            <img src="img/' . $collec->getHeberg($i)->getImage(0) . '" height="250px" width="310px">
+                            <div class="' . strtolower($collec->getHeberg($i)->getType()) . '">' . strtolower($collec->getHeberg($i)->getType()) . '</div>';
                     ?>
                         
 
@@ -51,18 +47,18 @@ include $inc_path . "hebergement.php";
 
                     <div class="logos">
 
-                        <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p><?php echo $r['lit']; ?></p></div>
-                        <div class="logo"><img src="img/user-group.png" height="30px" width="30px"><p><?php echo $r['nbpersonnes']; ?></p></div>
-                        <div class="logo"><img src="img/bathtub.png" height="30px" width="30px"><p><?php echo $r['nb_sallebain']; ?></p></div>
-                        <div class="logo"><img src="img/swimming.png" height="30px" width="30px"><p><?php echo ($r['piscine']==1 ? "oui" : "non"); ?></p></div>
-                        <div class="logo"><img src="img/dog.png" height="30px" width="30px"><p><?php echo ($r['animaux']==1 ? "oui" : "non"); ?></p></div>
-                        <div class="logo"><img src="img/wifi.png" height="30px" width="30px"><p><?php echo ($r['wifi']==1 ? "oui" : "non"); ?></p></div>
+                        <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p><?php echo $collec->getHeberg($i)->getSomething('lit'); ?></p></div>
+                        <div class="logo"><img src="img/user-group.png" height="30px" width="30px"><p><?php echo $collec->getHeberg($i)->getSomething('nbpersonnes'); ?></p></div>
+                        <div class="logo"><img src="img/bathtub.png" height="30px" width="30px"><p><?php echo  $collec->getHeberg($i)->getSomething("nb_sallebain"); ?></p></div>
+                        <div class="logo"><img src="img/swimming.png" height="30px" width="30px"><p><?php echo ( $collec->getHeberg($i)->getSomething('piscine')==1 ? "oui" : "non"); ?></p></div>
+                        <div class="logo"><img src="img/dog.png" height="30px" width="30px"><p><?php echo ( $collec->getHeberg($i)->getSomething('animaux')==1 ? "oui" : "non"); ?></p></div>
+                        <div class="logo"><img src="img/wifi.png" height="30px" width="30px"><p><?php echo ( $collec->getHeberg($i)->getSomething('wifi')==1 ? "oui" : "non"); ?></p></div>
 
                     </div>
 
-                    <div class="descript"><h2><?php echo $r['lieu']; ?></h2><p>A partir de <b><?php echo $r['prix']?> €</b> par jour</p></div>
+                    <div class="descript"><h2><?php echo $collec->getHeberg($i)->getSomething("lieu"); ?></h2><p>A partir de <b><?php echo $collec->getHeberg($i)->getSomething("prix");?> €</b> par jour</p></div>
                     <div class="zoom">
-                        <button onclick='loadpage(<?php echo $r["id"];?>)'>Voir le logement</button>
+                        <button onclick='loadpage(<?php echo $collec->getHeberg($i)->getSomething("id");?>)'>Voir le logement</button>
                     </div>
                     
                 </div>

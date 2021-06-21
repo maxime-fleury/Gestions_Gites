@@ -1,5 +1,44 @@
 <?php 
-
+class hebergements{
+	protected $hebergs;
+	protected $nb_heberg;
+	protected $dbh;
+	public function	__construct($dbh){
+		$this->nb_heberg = 0;
+		$this->dbh = $dbh;
+		$this->loadAllHeberg();
+	}
+	public function addHeberg($type, $id, $titre, $description, $nb_pers, $nb_sbain, $lieu, $prix, $wifi, $animaux, $lit, $jardin, $piscine, $CaveGrenierGarage){
+		switch($type){
+			case "Chambre":
+				$this->hebergs[$this->nb_heberg] = new Chambre($id, $titre, $description, $nb_pers, $nb_sbain, $lieu, $prix, $wifi, $animaux, $lit);
+			break;
+			case "Appartement":
+				$this->hebergs[$this->nb_heberg] = new Appartement($id, $titre, $description, $nb_pers, $nb_sbain, $lieu, $prix, $wifi, $animaux, $lit, $jardin);
+			break;
+			case "Maison":
+				$this->hebergs[$this->nb_heberg] = new Maison($id, $titre, $description, $nb_pers, $nb_sbain, $lieu, $prix, $wifi, $animaux, $lit, $jardin, $piscine, $CaveGrenierGarage);
+			break;
+		}
+		$this->hebergs[$this->nb_heberg]->setDbh($this->dbh);
+		$this->hebergs[$this->nb_heberg]->loadImages();
+		$this->nb_heberg += 1;
+	}
+	public function loadAllHeberg(){
+		$statement = "SELECT * from hebergement";
+		$m = $this->dbh->prepare($statement);
+		$m->execute();
+		while($r = $m->fetch()){
+			$this->addHeberg($r['type'], $r['id'], $r['titre'], $r['Description'], $r['nbpersonnes'], $r['nb_sallebain'], $r["lieu"], $r['prix'], $r['wifi'], $r["animaux"], $r['lit'], $r['jardin'], $r['piscine'], $r['garage']);
+		}
+	}
+	public function getHeberg($nb){
+		return $this->hebergs[$nb];
+	}
+	public function getNbHebergs(){
+		return $this->nb_heberg;
+	}
+}
 class hebergement{
 		protected $id;
 		protected $titre;
@@ -53,8 +92,11 @@ class hebergement{
 			$this->id = $m->fetch()['cnt'];
 			echo $this->id;
 		}
-		public function addImage($url){
-			$images->addElement($url);
+		public function loadImages(){
+			$this->images->loadAllImages($this->dbh, $this->id);
+		}
+		public function getImage($n){
+			return $this->images->getElementn($n);
 		}
 		public function toString(){
 			echo "id: " . $this->id . "<br> Titre: " . $this->titre . "<br>Description:";
@@ -63,10 +105,19 @@ class hebergement{
 				echo "<br>Nb salle de bain:" . $this->nb_sallebain;
 			echo "<br> Lieu: " . $this->lieu . "<br> Prix: " . $this->prix;
 		}
+		public function getType(){
+			return $this->type;
+		}
+		public function getSomething($truc){
+			if(!isset($this->$truc)){
+				return "0";
+			}
+			return $this->$truc;
+		}
 
 }
 class chambre extends hebergement{
-	private $type;
+	public $type;
 		public function __construct($id, $titre, $description, $nb_pers, $nb_sbain, $lieu, $prix, $wifi, $animaux, $lit){
 		parent::__construct($id, $titre, $description, $nb_pers, $nb_sbain, $lieu, $prix, $wifi, $animaux, $lit);
 		$this->type = "Chambre";
@@ -85,12 +136,10 @@ class chambre extends hebergement{
 }
 class appartement extends chambre{
 	protected $jardin = 0;
-	private $type;
+	public $type;
 	public function __construct($id, $titre, $description, $nb_pers, $nb_sbain, $lieu, $prix, $wifi, $animaux, $lit, $jardin){
 		$this->jardin = $jardin;
-
 		parent::__construct($id, $titre, $description, $nb_pers, $nb_sbain, $lieu, $prix, $wifi, $animaux, $lit);
-
 		$this->type = "Appartement";
 	}
 	public function insertDb(){
@@ -115,7 +164,7 @@ class appartement extends chambre{
 class maison extends appartement{
 	protected $piscine = 0;
 	protected $CaveGrenierGarage = "aucun";
-	private $type;
+	public $type;
 	protected $jardin;
 	public function __construct($id, $titre, $description, $nb_pers, $nb_sbain, $lieu, $prix, $wifi, $animaux, $lit, $jardin, $piscine, $CaveGrenierGarage){
 		$this->piscine = $piscine;
@@ -153,10 +202,10 @@ class images {
 		$this->nbElements++;
 	}
 	public function getElementn($n){
-		return $urls[$n];
+		return $this->urls[$n];
 	}
 	public function getnbElements(){
-		return $nbElements;
+		return $this->nbElements;
 	}
 	public function toString(){
 		$res = "";
@@ -177,11 +226,11 @@ class images {
 		$m->execute();
 	}
 	public function loadAllImages($dbh, $id){
-		$statement = "SELECT * from images WHERE id_heberg = $id";
+		$id = intval($id);
+		$statement = "SELECT * from image WHERE id_heberg = $id";
 		$m = $dbh->prepare($statement);
 		$m->execute();
-	   
-		while($r = $m->fetch()){
+	 	while($r = $m->fetch()){
 			$this->addElement($r['image']);
 		}
 	}
