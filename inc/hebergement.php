@@ -191,6 +191,24 @@ class maison extends appartement{
 			$m->execute()or die(print_r($m->errorInfo(), true));
 	}
 }
+class indispo{
+	private $id;
+	private $dbh;
+	public function __construct($dbh,$id){
+		$this->dbh = $dbh;
+		$this->id = $id;
+	}
+	public function getIndispo(){
+		$res = "";
+		$statement = "SELECT * from indispo WHERE id=$this->id";
+		$m = $this->dbh->prepare($statement);
+		$m->execute()or die(print_r($m->errorInfo(), true));
+	 	while($r = $m->fetch()){
+			$res .= $r['date']."%%%";
+		}
+		return $res;
+	}
+}
 class images {
 	private $nbElements;
 	private $urls = array();

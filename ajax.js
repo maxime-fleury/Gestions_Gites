@@ -2,6 +2,10 @@ function loadpage(id){
     var params = new Object();
     params.id = id;
     loadXMLDoc("logement.php", params);
+    var newScript = document.createElement("script");
+    newScript.src = "https://xill.tk/projet_gite/inc/calendrier.js";
+    document.getElementById("view").appendChild(newScript);
+    setTimeout( function(){loadIndispo(parseInt(id));},200);
 }
 function loadXMLDoc(page, params) {
     var xmlhttp = new XMLHttpRequest();

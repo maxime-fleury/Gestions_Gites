@@ -1,7 +1,6 @@
 console.log("TEST LOADING SCRIPT");
 setTimeout(function(){
     var nb_personne = document.getElementById("nb_personnes");
-    console.log("script calcPrix loaded");
     var nb_nuits;
     var prix_base = document.getElementById("prix_base");
     var prix_total = document.getElementById("total"); 

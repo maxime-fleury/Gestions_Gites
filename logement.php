@@ -66,7 +66,7 @@ if(isset($_POST['id'])){
     
     
     <div class="pic">
-        
+    <div id='calendrier'></div>
         <form action="">
             <h2><b><?php echo $r['prix'];?> €</b>/nuit</h2>
 

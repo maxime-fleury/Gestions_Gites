@@ -1,0 +1,20 @@
+td.rouge{
+color:white;
+background:#a10101;
+}
+td{
+color:white;
+background:green;
+}
+tr{text-align:center;}
+td, tr{
+margin:0;
+}
+th{
+color:blue;
+width:55px;
+}
+table{
+ border-collapse: collapse;
+border: 1px solid black;
+}
