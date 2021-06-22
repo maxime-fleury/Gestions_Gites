@@ -22,17 +22,17 @@ var months = [
 	"Nov",
 	"Dec"
 ];
-/*
+
 var indispo = [
 	"5 Juil",
 	"25 Juin",
 	"6 Juil",
 	"30 Juin",
-];*/
-function creerCalendrier(){
+];
+function creerCalendrier(indispo){
 	//creer la table
 	table = document.createElement("table");
-	calendar.append(table);
+	//calendar.append(table);
 	//generer lun/mard/merc/jeudi....
 	x = table.insertRow();
 	for(i = 0; i < 7; i++){
@@ -77,14 +77,14 @@ function createDay(table, i, todayDD, todayMM, todayYY, todayDayOfMonthh){
 		el = x.insertCell();
 		el.innerHTML = /*dayweek[(parseInt(todayDD-1)+i)%7] + " " + */(parseInt(todayDayOfMonthh) + i);
 	}
-	indispo.forEach(k =>{//pour chaque jour dans le tableau indispo
+	/*indispo.forEach(k =>{//pour chaque jour dans le tableau indispo
 		var indi_tmp = k.split(" ");
 		if(indi_tmp[0] == parseInt(todayDayOfMonthh+i)){//si le jours correspond
 			if(indi_tmp[1] == months[(todayMM)]){//si le mois correspond
 				el.classList.add("rouge");
 			}
 		}
-	});
+	});*/
 }
 
 
@@ -92,8 +92,14 @@ function createDay(table, i, todayDD, todayMM, todayYY, todayDayOfMonthh){
 function loadIndispo(id){
     var params = new Object();
     params.id = id;
-    let indispo = loadXMLDoc("inc/getIndispo.php", params);
-	creerCalendrier(indispo);
+	var indispo = [
+		"5 Juil",
+		"25 Juin",
+		"6 Juil",
+		"30 Juin",
+	];	
+    //let indispo = loadXMLDoc("inc/getIndispo.php", params);
+	//creerCalendrier(indispo);
 }
 function loadXMLDoc(page, params) {
     var xmlhttp = new XMLHttpRequest();
