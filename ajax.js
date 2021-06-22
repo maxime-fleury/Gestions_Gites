@@ -43,3 +43,4 @@ function loadXMLDoc(page, params) {
     xmlhttp.send("id=" + params.id);
     return false;
 }
+

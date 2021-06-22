@@ -25,6 +25,23 @@ include $inc_path . "hebergement.php";
         </div>
 
             <div class="gites">
+            <!-- test moteur de recherche -->
+            <?php
+                    if($allgites->rowCount() > 0){
+
+                        while($gite = $allgites->fetch()){
+                            ?>
+                            <p><?= $gite['lieu']?></p>
+                            <?php
+                        }
+
+                    }else {
+                        ?>
+                        <p>Aucun gite trouvé pour la recherche</p>
+                        <?php
+                    }
+                    ?>
+                <!-- fin test -->
             <?php
                 /*$statement = "select * from hebergement";
                 $m = $dbh->prepare($statement);
@@ -34,6 +51,8 @@ include $inc_path . "hebergement.php";
                 for($i = 0; $i < $collec->getNbHebergs(); $i++){
         ?>
                 <div class="gite">
+
+                
 
                     <div class="photo">
                     <?php

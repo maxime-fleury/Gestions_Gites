@@ -7,6 +7,7 @@ setTimeout(function(){
 
     function changeDiv(){
         view.setAttribute ("style" , "display:flex");
+        
     }
 
     rond.addEventListener('click', closeWindow);
