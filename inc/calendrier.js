@@ -43,20 +43,23 @@ function creerCalendrier(indispo){
 	x = table.insertRow();
 	for(i = 0; i < 7; i++){
 		th = document.createElement("th");
-		th.innerHTML = dayweek[((i+(new Date().getDay())-1)%7)];
+		th.innerHTML = dayweek[((i+(new Date(new Date().getFullYear(), new Date().getMonth(), 1).getDay())-1)%7)];
 		x.append(th);
 	}
 	x = table.insertRow();//yes !
+	//jour d'avant du mois actuel
+	let date = new Date();
+	getCalendarXMonth(table, calendar, dayweek, new Date( date.getFullYear(), date.getMonth(), 1), indispo, "inactif")
 	//mois acutelle
-	getCalendarXMonth(table, calendar, dayweek, new Date(),indispo);
+	getCalendarXMonth(table, calendar, dayweek, new Date(), indispo, "active");
 
 	//mois suivant
 	let xd = new Date();
 	xd.setMonth(xd.getMonth()+1);
 	xd.setDate(1);
-	getCalendarXMonth(table, calendar, dayweek, xd,indispo);
+	getCalendarXMonth(table, calendar, dayweek, xd, indispo, "active");
 }
-function getCalendarXMonth(table, calendar, dayweek, da,indispo){
+function getCalendarXMonth(table, calendar, dayweek, da, indispo, type){
 	var todayD = da.getDay();
 	var todayM = da.getMonth();
 	var todayY = da.getYear();
@@ -67,21 +70,40 @@ function getCalendarXMonth(table, calendar, dayweek, da,indispo){
 	time.setMonth(time.getMonth() + 1);
 	time.setDate(0);
 	var days = time.getDate() > da.getDate() ? time.getDate() - da.getDate() : 0;
+	if(type == "inactif")//then nb days to today
+		{
+			time = new Date();
+
+			days = time.getDate() > da.getDate() ? time.getDate() - da.getDate() : 0;
+		}
 	//console.log(days);
 	for(i = 0; i < days; i++){
-		createDay(table, i, todayD, todayM, todayY, todayDayOfMonth,indispo);
+		createDay(table, i, todayD, todayM, todayY, todayDayOfMonth,indispo,type);
 	}
 }
 
-function createDay(table, i, todayDD, todayMM, todayYY, todayDayOfMonthh,indispo ){		
-	if((parseInt(todayDD-1)+i)%7 == (((new Date().getDay()-1))%7)){//SI jour de la semaine comme aujourd'hui !
+function createDay(table, i, todayDD, todayMM, todayYY, todayDayOfMonthh,indispo,type){		
+	if((parseInt(todayDD-1)+i)%7 == (((new Date(new Date().getFullYear(), new Date().getMonth(), 1).getDay())-1)%7)){//SI jour de la semaine comme aujourd'hui !
 		x = table.insertRow();
 		el = x.insertCell(0);
 		el.innerHTML = /*dayweek[(parseInt(todayDD-1)+i)%7] + " " + */(parseInt(todayDayOfMonthh) + i);//ajouter l'element
+
 	}
 	else{//(si pas lundi)
 		el = x.insertCell();
 		el.innerHTML = /*dayweek[(parseInt(todayDD-1)+i)%7] + " " + */(parseInt(todayDayOfMonthh) + i);
+	}
+	dd = new Date();
+	dc = new Date(todayYY, todayMM, todayDD);
+	de = new Date(todayYY, todayDD+1, 1);
+	if(type=="inactif"){
+		el.classList.add("inactif");
+	}
+	if(dd==dc){
+		el.classList.add("today");
+	}
+	if(dc == de){
+		el.classList.add("firstDayNextMonth");
 	}
 	for(j = 0; j < indispo.length;j++){//pour elements dans le tableau indispo
 		var indi_tmp = indispo[j].split(" ");
