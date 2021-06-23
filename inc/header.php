@@ -1,3 +1,24 @@
+<?php
+    try{
+        $dbh = new pdo('mysql:host=xill.tk;port=3306;dbname=gite','root','password123',array(
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        ));
+
+    }catch(PDOException $pe){
+            echo $pe->getMessage();
+    }   
+
+    $allgites = $dbh->query('SELECT * FROM hebergement ORDER BY id DESC');
+    if(isset($_GET['s']) AND !empty($_GET['s'])){
+        $recherche = htmlspecialchars($_GET['s']);
+        $allgites = $dbh->query('SELECT * FROM hebergement WHERE lieu LIKE "%' .$recherche. '%" ORDER BY id DESC');
+    }
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,8 +44,8 @@
 
             <div class="accueil">
 
-                <form action="">
-                    <input type="search" placeholder="Rechercher un lieu">
+                <form method="GET">
+                    <input type="search" name = "s" placeholder="Rechercher un lieu">
                     <button type="submit"><img src="img/loupe.png" width="30px" height="30px" alt=""></button>
                 </form>
             
