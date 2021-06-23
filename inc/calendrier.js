@@ -23,34 +23,43 @@ var months = [
 	"Dec"
 ];
 
-var indispo = [
+/*var indispo = [
 	"5 Juil",
 	"25 Juin",
 	"6 Juil",
 	"30 Juin",
-];
+];*/
 function creerCalendrier(indispo){
 	//creer la table
+	titre = document.createElement("h2");
+	titre.style.position = "relative";
+	titre.style.left = "42%";
+	titre.style.right = "50%";
+	titre.innerHTML = months[new Date().getMonth()];
+	calendar.append(titre);
 	table = document.createElement("table");
-	//calendar.append(table);
+	calendar.append(table);
 	//generer lun/mard/merc/jeudi....
 	x = table.insertRow();
 	for(i = 0; i < 7; i++){
 		th = document.createElement("th");
-		th.innerHTML = dayweek[i];
+		th.innerHTML = dayweek[((i+(new Date(new Date().getFullYear(), new Date().getMonth(), 1).getDay())-1)%7)];
 		x.append(th);
 	}
 	x = table.insertRow();//yes !
+	//jour d'avant du mois actuel
+	let date = new Date();
+	getCalendarXMonth(table, calendar, dayweek, new Date( date.getFullYear(), date.getMonth(), 1), indispo, "inactif")
 	//mois acutelle
-	getCalendarXMonth(table, calendar, dayweek, new Date());
+	getCalendarXMonth(table, calendar, dayweek, new Date(), indispo, "active");
 
 	//mois suivant
 	let xd = new Date();
 	xd.setMonth(xd.getMonth()+1);
 	xd.setDate(1);
-	getCalendarXMonth(table, calendar, dayweek, xd);
+	getCalendarXMonth(table, calendar, dayweek, xd, indispo, "active");
 }
-function getCalendarXMonth(table, calendar, dayweek, da){
+function getCalendarXMonth(table, calendar, dayweek, da, indispo, type){
 	var todayD = da.getDay();
 	var todayM = da.getMonth();
 	var todayY = da.getYear();
@@ -61,53 +70,61 @@ function getCalendarXMonth(table, calendar, dayweek, da){
 	time.setMonth(time.getMonth() + 1);
 	time.setDate(0);
 	var days = time.getDate() > da.getDate() ? time.getDate() - da.getDate() : 0;
+	if(type == "inactif")//then nb days to today
+		{
+			time = new Date();
+
+			days = time.getDate() > da.getDate() ? time.getDate() - da.getDate() : 0;
+		}
 	//console.log(days);
 	for(i = 0; i < days; i++){
-		createDay(table, i, todayD, todayM, todayY, todayDayOfMonth);
+		createDay(table, i, todayD, todayM, todayY, todayDayOfMonth,indispo,type);
 	}
 }
 
-function createDay(table, i, todayDD, todayMM, todayYY, todayDayOfMonthh){		
-	if((parseInt(todayDD-1)+i)%7 == 0){//SI lundi !
+function createDay(table, i, todayDD, todayMM, todayYY, todayDayOfMonthh,indispo,type){		
+	if((parseInt(todayDD-1)+i)%7 == (((new Date(new Date().getFullYear(), new Date().getMonth(), 1).getDay())-1)%7)){//SI jour de la semaine comme aujourd'hui !
 		x = table.insertRow();
 		el = x.insertCell(0);
 		el.innerHTML = /*dayweek[(parseInt(todayDD-1)+i)%7] + " " + */(parseInt(todayDayOfMonthh) + i);//ajouter l'element
+
 	}
-	else{//si pas lundi
+	else{//(si pas lundi)
 		el = x.insertCell();
 		el.innerHTML = /*dayweek[(parseInt(todayDD-1)+i)%7] + " " + */(parseInt(todayDayOfMonthh) + i);
 	}
-	/*indispo.forEach(k =>{//pour chaque jour dans le tableau indispo
-		var indi_tmp = k.split(" ");
-		if(indi_tmp[0] == parseInt(todayDayOfMonthh+i)){//si le jours correspond
-			if(indi_tmp[1] == months[(todayMM)]){//si le mois correspond
-				el.classList.add("rouge");
+	dd = new Date();
+	dc = new Date(todayYY, todayMM, todayDD);
+	de = new Date(todayYY, todayDD+1, 1);
+	if(type=="inactif"){
+		el.classList.add("inactif");
+	}
+	if(dd==dc){
+		el.classList.add("today");
+	}
+	if(dc == de){
+		el.classList.add("firstDayNextMonth");
+	}
+	for(j = 0; j < indispo.length;j++){//pour elements dans le tableau indispo
+		var indi_tmp = indispo[j].split(" ");
+		if(indi_tmp != "")
+		console.log(indi_tmp[0] + " " + parseInt(todayDayOfMonthh+i));
+			if(parseInt(indi_tmp[0]) == parseInt(todayDayOfMonthh+i)){
+				console.log(indi_tmp[0] + " " + parseInt(todayDayOfMonthh));//si le jours correspond
+				if(indi_tmp[1] == months[(todayMM)]){//si le mois correspond
+					el.classList.add("rouge");
+					console.log("rouge");
+				}
 			}
-		}
-	});*/
+	}
 }
 
-
-
-function loadIndispo(id){
-    var params = new Object();
-    params.id = id;
-	var indispo = [
-		"5 Juil",
-		"25 Juin",
-		"6 Juil",
-		"30 Juin",
-	];	
-    //let indispo = loadXMLDoc("inc/getIndispo.php", params);
-	//creerCalendrier(indispo);
-}
-function loadXMLDoc(page, params) {
+function loadXMLDocI(page, params) {
     var xmlhttp = new XMLHttpRequest();
-
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {   // XMLHttpRequest.DONE == 4
-           if (xmlhttp.status == 200) {
-               return xmlhttp.responseText.split("%%%");
+           if (xmlhttp.status == 200) {	
+			creerCalendrier(xmlhttp.responseText.split("%%%"));
            }
            else if (xmlhttp.status == 400) {
               alert('There was an error 400');
@@ -121,5 +138,4 @@ function loadXMLDoc(page, params) {
     xmlhttp.open("POST", page, true);
     xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xmlhttp.send("id=" + params.id);
-    return false;
 }
