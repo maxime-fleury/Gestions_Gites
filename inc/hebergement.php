@@ -199,12 +199,27 @@ class indispo{
 		$this->id = $id;
 	}
 	public function getIndispo(){
+		$months = [
+			"Janv",
+			"Fevr",
+			"Mars",
+			"Avril",
+			"Mai",
+			"Juin",
+			"Juil",
+			"Aou",
+			"Sept",
+			"Oct",
+			"Nov",
+			"Dec"
+		];
 		$res = "";
-		$statement = "SELECT * from indispo WHERE id=$this->id";
+		$statement = "SELECT * from indispo WHERE id_heberg=$this->id";
 		$m = $this->dbh->prepare($statement);
 		$m->execute()or die(print_r($m->errorInfo(), true));
 	 	while($r = $m->fetch()){
-			$res .= $r['date']."%%%";
+			$restmp = explode("-", $r['date']);
+			$res .= $restmp[2] . " " . $months[intval($restmp[1])] . "%%%";
 		}
 		return $res;
 	}

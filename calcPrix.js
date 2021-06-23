@@ -27,6 +27,8 @@ setTimeout(function(){
     }
 
 },100);
+
+
 function calcPrix(date1, date2, nb_personne, prix_base){
     // To calculate the time difference of two dates
     date1tmp = date1;
@@ -67,3 +69,5 @@ function calcPrix(date1, date2, nb_personne, prix_base){
 //return keep2decimal((prix_base + nbperson*1.20 )*diff_date);
 
 }
+
+
