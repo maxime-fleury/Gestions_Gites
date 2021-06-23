@@ -372,6 +372,11 @@ form button {
     box-shadow: 0px 10px 20px black;  
 }
 
+.gite:hover{
+    box-shadow: 0px 10px 20px var(--color2);  
+
+}
+
 .gite .photo {
     height:250px;
     width:100%;
