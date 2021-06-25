@@ -1,9 +1,8 @@
 <?php
-try{
-    $dbh = new pdo('mysql:host=xill.tk;port=3306;dbname=gite','root','password123',array(
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    ));
 
-    }catch(PDOException $pe){
-        echo $pe->getMessage();
-    }   
+$dsn = 'mysql:dbname=gite;host=localhost';
+$user = 'root';
+$password = "password123";
+$host_name = "http://xill.tk";
+
+$dbh = new PDO($dsn, $user, $password);

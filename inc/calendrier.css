@@ -18,3 +18,18 @@ table{
  border-collapse: collapse;
 border: 1px solid black;
 }
+#calendrier{
+    margin-top: -23px;
+}
+td.inactif{
+    color:grey;
+    background: black;
+}
+td.firstDayNextMonth{
+    color:white;
+    background:blue;
+}
+td.today{
+    color:red;
+    background:black;
+}
