@@ -1,6 +1,6 @@
 td.rouge{
-color:white;
-background:#a10101;
+color:white!important;
+background:#a10101!important;
 }
 td{
 color:white;
@@ -22,14 +22,17 @@ border: 1px solid black;
     margin-top: -23px;
 }
 td.inactif{
-    color:grey;
-    background: black;
+    color:black;
+    background: darkslategrey;
 }
 td.firstDayNextMonth{
-    color:white;
-    background:blue;
+    color:blue;
+    background:green;
+    border:solid 1px black;
 }
 td.today{
-    color:red;
-    background:black;
+    color:black;
+    background:green;
+    border:solid 1px black;
+
 }

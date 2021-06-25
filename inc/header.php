@@ -8,7 +8,6 @@
             echo $pe->getMessage();
     }   
 
-    // $allimages = $dbh->query('SELECT * FROM image ORDER BY id DESC');
     $allgites = $dbh->query('SELECT * FROM hebergement ORDER BY id DESC');
     if(isset($_GET['s']) AND !empty($_GET['s'])){
         $recherche = htmlspecialchars($_GET['s']);
@@ -36,7 +35,7 @@
 
             <div class="head">
 
-                <div><a href="index.php"><img src="img/house.png" height="60px" width="60px"></a></div>
+                <div><img src="img/house.png" height="60px" width="60px"></div>
                 <button>Chambres</button>
                 <button>Appartements</button>
                 <button>Maisons</button>

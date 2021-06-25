@@ -25,35 +25,13 @@ include $inc_path . "hebergement.php";
         </div>
 
             <div class="gites">
-
-
             <!-- test moteur de recherche -->
             <?php
                     if($allgites->rowCount() > 0){
 
                         while($gite = $allgites->fetch()){
                             ?>
-                            <div class="gite">
-                                <div class="photo">
-
-                                    <img src="">
-                                    <div class="chambre"><?= $gite['type']?></div>
-                                </div>
-                                <div class="logos">
-                                    <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p><?= $gite['lit']?></div>
-                                    <div class="logo"><img src="img/user-group.png" height="30px" width="30px"><p><?= $gite['nbpersonnes']?></p></div>
-                                    <div class="logo"><img src="img/bathtub.png" height="30px" width="30px"><p><?= $gite['nb_sallebain']?></p></div>
-                                    <div class="logo"><img src="img/swimming.png" height="30px" width="30px"><p><?= $gite['piscine']?></div>
-                                    <div class="logo"><img src="img/dog.png" height="30px" width="30px"><p><?= $gite['animaux']?></div>
-                                    <div class="logo"><img src="img/wifi.png" height="30px" width="30px"><p><?= $gite['wifi']?></div>
-                                </div>
-                                <div class="descript"><h2><?= $gite['lieu']?></h2><p>A partir de <b><?= $gite['prix']?>€</b> par jour</p></div>
-                                <div class="zoom">
-
-                        <button>Voir le logement</button>
-
-                    </div>
-                            </div>
+                            <p><?= $gite['lieu']?></p>
                             <?php
                         }
 
@@ -64,8 +42,6 @@ include $inc_path . "hebergement.php";
                     }
                     ?>
                 <!-- fin test -->
-
-
             <?php
                 /*$statement = "select * from hebergement";
                 $m = $dbh->prepare($statement);

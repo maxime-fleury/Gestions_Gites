@@ -57,6 +57,7 @@ function creerCalendrier(indispo){
 	let xd = new Date();
 	xd.setMonth(xd.getMonth()+1);
 	xd.setDate(1);
+	console.log(xd.getMonth());
 	getCalendarXMonth(table, calendar, dayweek, xd, indispo, "active");
 }
 function getCalendarXMonth(table, calendar, dayweek, da, indispo, type){
@@ -93,24 +94,21 @@ function createDay(table, i, todayDD, todayMM, todayYY, todayDayOfMonthh,indispo
 		el = x.insertCell();
 		el.innerHTML = /*dayweek[(parseInt(todayDD-1)+i)%7] + " " + */(parseInt(todayDayOfMonthh) + i);
 	}
-	dd = new Date();
-	dc = new Date(todayYY, todayMM, todayDD);
-	de = new Date(todayYY, todayDD+1, 1);
+
+	var de = new Date();
+	de.setMonth(de.getMonth()+1, 1);
 	if(type=="inactif"){
 		el.classList.add("inactif");
 	}
-	if(dd==dc){
-		el.classList.add("today");
-	}
-	if(dc == de){
-		el.classList.add("firstDayNextMonth");
-	}
 	for(j = 0; j < indispo.length;j++){//pour elements dans le tableau indispo
 		var indi_tmp = indispo[j].split(" ");
+		if(todayDayOfMonthh+i == new Date().getDate() && todayMM == new Date().getMonth()){
+			el.classList.add("today");
+		}
+		if(de.getDate() == todayDayOfMonthh+i && de.getMonth() == todayMM)
+			el.classList.add("firstDayNextMonth");
 		if(indi_tmp != "")
-		console.log(indi_tmp[0] + " " + parseInt(todayDayOfMonthh+i));
 			if(parseInt(indi_tmp[0]) == parseInt(todayDayOfMonthh+i)){
-				console.log(indi_tmp[0] + " " + parseInt(todayDayOfMonthh));//si le jours correspond
 				if(indi_tmp[1] == months[(todayMM)]){//si le mois correspond
 					el.classList.add("rouge");
 					console.log("rouge");
