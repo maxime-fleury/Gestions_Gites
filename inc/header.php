@@ -37,8 +37,11 @@
 
                 <div><img src="img/house.png" height="60px" width="60px"></div>
                 <button>Chambres</button>
+                <div><a href="index.php"><img src="img/house.png" height="60px" width="60px"></a></div>
+                <h1>Logement</h1>
+                
+                <!-- <button>Chambres</button>
                 <button>Appartements</button>
-                <button>Maisons</button>
 
             </div>
 

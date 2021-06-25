@@ -1,8 +1,8 @@
 <footer>
     <div class='container'>
-        <button href='index.php?c=Chambre'>Chambre</button>
+        <!-- <button href='index.php?c=Chambre'>Chambre</button>
         <button href='index.php?c=Appartement'>Appartement</button>
-        <button href='index.php?c=Maison'>Maison</button>
+        <button href='index.php?c=Maison'>Maison</button> -->
     </div>
     <div class='container'>
         <img class='footer_img' alt='logo' src='../img/house.png'></img>

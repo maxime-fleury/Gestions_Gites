@@ -32,6 +32,27 @@ include $inc_path . "hebergement.php";
                         while($gite = $allgites->fetch()){
                             ?>
                             <p><?= $gite['lieu']?></p>
+                            <div class="gite">
+                                <div class="photo">
+
+                                    <img src="">
+                                    <div class="chambre"><?= $gite['type']?></div>
+                                </div>
+                                <div class="logos">
+                                    <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p><?= $gite['lit']?></div>
+                                    <div class="logo"><img src="img/user-group.png" height="30px" width="30px"><p><?= $gite['nbpersonnes']?></p></div>
+                                    <div class="logo"><img src="img/bathtub.png" height="30px" width="30px"><p><?= $gite['nb_sallebain']?></p></div>
+                                    <div class="logo"><img src="img/swimming.png" height="30px" width="30px"><p><?=$gite['piscine'] == 1 ? "oui" : "non"?></div>
+                                    <div class="logo"><img src="img/dog.png" height="30px" width="30px"><p><?= $gite['animaux'] == 1 ? "oui" : "non"?></div>
+                                    <div class="logo"><img src="img/wifi.png" height="30px" width="30px"><p><?= $gite['wifi'] == 1 ? "oui" : "non"?></div>
+                                </div>
+                                <div class="descript"><h2><?= $gite['lieu']?></h2><p>A partir de <b><?= $gite['prix']?>€</b> par jour</p></div>
+                                <div class="zoom">
+
+                        <button>Voir le logement</button>
+
+                    </div>
+                            </div>
                             <?php
                         }
 
@@ -96,9 +117,9 @@ include $inc_path . "hebergement.php";
 
             <div class="foot">
 
-                <button>Chambres</button>
+                <!-- <button>Chambres</button>
                 <button>Appartements</button>
-                <button>Maisons</button>
+                <button>Maisons</button> -->
                 <img src="img/facebook.png" height="40px" width="40px">
                 <img src="img/twitter.png" height="40px" width="40px">
                 <img src="img/instagram.png" height="40px" width="40px">

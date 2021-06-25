@@ -3,15 +3,15 @@ color:white!important;
 background:#a10101!important;
 }
 td{
-color:white;
-background:green;
+color:rgb(0, 0, 0);
+/* background:green; */
 }
 tr{text-align:center;}
 td, tr{
 margin:0;
 }
 th{
-color:blue;
+/* color:blue; */
 width:55px;
 }
 table{
@@ -35,4 +35,15 @@ td.today{
     background:green;
     border:solid 1px black;
 
+    color:grey;
+    background: rgba(0, 0, 0, 0.507);
+}
+td.firstDayNextMonth{
+    color:white;
+    /* background:blue; */
+}
+td.today{
+    color:rgb(255, 255, 255);
+    background:rgba(0, 0, 0, 0.459);
+    border: 2px solid blue;
 }
