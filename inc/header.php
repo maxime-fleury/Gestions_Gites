@@ -37,9 +37,11 @@
             <div class="head">
 
                 <div><a href="index.php"><img src="img/house.png" height="60px" width="60px"></a></div>
-                <button>Chambres</button>
+                <h1>Logement</h1>
+                
+                <!-- <button>Chambres</button>
                 <button>Appartements</button>
-                <button>Maisons</button>
+                <button>Maisons</button> -->
 
             </div>
 
