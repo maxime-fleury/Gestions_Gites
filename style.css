@@ -103,9 +103,33 @@ input:focus{
     cursor: pointer;
     margin-left: -50px;
     margin-top:103px;
-}@media screen and (max-width:900px) {
+}
+
+@media(max-width: 900px) {
     .accueil input {
         width: 70%;
+    }
+    .pic form {
+        width: 325px!important;
+        height: 820px!important;
+    }
+
+    .view {
+        width:100%;
+        height:120%!important;
+        position: sticky!important;
+
+    }
+
+    .font {
+        background-color: transparent!important;
+    }
+    .rond {
+        border: none!important;
+        height: 30px!important;
+        width: 30px!important;
+        position:absolute!important;
+        left:80%!important;
     }
 }
 
@@ -339,7 +363,7 @@ mark {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: grey;
+    background-color: var(--color1);
     margin: 5px;    
 }
 
