@@ -1,4 +1,4 @@
-td.rouge{
+    td.rouge{
 color:white!important;
 background:#a10101!important;
 }
@@ -48,5 +48,4 @@ td.today{
     color:rgb(255, 255, 255);
     background:rgba(0, 0, 0, 0.459);
     border: 2px solid blue;
->>>>>>> antho_temp
 }
