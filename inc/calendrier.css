@@ -22,21 +22,6 @@ border: 1px solid black;
     margin-top: -23px;
 }
 td.inactif{
-<<<<<<< HEAD
-    color:black;
-    background: darkslategrey;
-}
-td.firstDayNextMonth{
-    color:blue;
-    background:green;
-    border:solid 1px black;
-}
-td.today{
-    color:black;
-    background:green;
-    border:solid 1px black;
-
-=======
     color:grey;
     background: rgba(0, 0, 0, 0.507);
 }

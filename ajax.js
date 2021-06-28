@@ -10,6 +10,7 @@ function sendmail(id){
     params.date_debut = document.getElementById("date_debut").value;
     params.date_fin = document.getElementById("date_fin").value;
     params.nb_personnes = document.getElementById("nb_personnes").value;
+    params.prix = document.getElementById("total").value;
     sendrequest(params);
     return false;
 }
@@ -33,7 +34,7 @@ function sendrequest(params){
  //send get request to logement.php
      xmlhttp.open("POST", "sendmail.php", true);
      xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-     xmlhttp.send("id=" + params.id + "&email=" + params.email + "&date_debut="  + params.date_debut + "&date_fin=" + params.date_fin + "&nb_personnes=" + params.nb_personnes);
+     xmlhttp.send("id=" + params.id + "&email=" + params.email + "&date_debut="  + params.date_debut + "&date_fin=" + params.date_fin + "&nb_personnes=" + params.nb_personnes + "&prix=" + params.prix);
      return false;
 }
 function loadXMLDoc(page, params) {

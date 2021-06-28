@@ -25,7 +25,7 @@ if(isset($_POST['id'])){
                 $m = $dbh->prepare($statement);
                 $m->execute();
                 while($r = $m->fetch()){
-                    $statement = "select * from image where id_heberg=$id limit 1";
+                    $statement = "select * from image where id_heberg=$id limit 10";
                     $l = $dbh->prepare($statement);
                     $l->execute();
                     while($k = $l->fetch()){
@@ -39,7 +39,7 @@ if(isset($_POST['id'])){
         </div>
         <ul class="navigation_diapo">
             <?php
-            $statement = "select * from image where id_heberg=$id limit 10 offset 1";
+            $statement = "select * from image where id_heberg=$id limit 10";
             $l = $dbh->prepare($statement);
             $l->execute();
             $i = 0;
@@ -87,7 +87,7 @@ if(isset($_POST['id'])){
             <input type='email' id="email" value='gmail@gmail.com'>
                 <h2><span id='nbnuit'>2</span> nuits à <?php echo $r['prix'];?> €</h2>
             <input type='hidden' id='prix_base' value='<?php echo $r["prix"];?>'>
-            <h2><b>Total :</b>&nbsp;&nbsp;<mark><input type='text' id='total' disabled value='<?php echo (intval($r['prix'])*2);?>'> €</mark></h2>
+            <h2><b>Total :</b>&nbsp;&nbsp;<mark><input type='text' id='total' name='prix' disabled value='<?php echo (intval($r['prix'])*2);?>'> €</mark></h2>
             <button onclick="sendmail(<?php echo $r['id'];?>)">Réserver</button>
         
         </form>

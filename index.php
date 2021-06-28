@@ -33,9 +33,17 @@ include $inc_path . "hebergement.php";
                             ?>
                             <div class="gite">
                                 <div class="photo">
-
-                                    <img src="">
-                                    <div class="chambre"><?= $gite['type']?></div>
+                                <?php
+                                $id = $gite['id'];
+                                $statement = "SELECT * FROM image WHERE id_heberg = $id limit 1";
+                                $m = $dbh->prepare($statement);
+                                $m->execute();
+                                $image = $m->fetch()['image'];
+                                echo '
+                            <img src="img/' . $image . '" height="250px" width="310px">
+                            <div class="' . strtolower($gite['type']) . '">' .  $gite['type'] . '</div>';
+                            ?>
+                            <div class="<?= strtolower($gite['type'])?>"><?= $gite['type']?></div>
                                 </div>
                                 <div class="logos">
                                     <div class="logo"><img src="img/bed.png" height="30px" width="30px"><p><?= $gite['lit']?></div>
@@ -48,7 +56,7 @@ include $inc_path . "hebergement.php";
                                 <div class="descript"><h2><?= $gite['lieu']?></h2><p>A partir de <b><?= $gite['prix']?>€</b> par jour</p></div>
                                 <div class="zoom">
 
-                        <button>Voir le logement</button>
+                            <button onclick='loadpage(<?php echo $gite["id"];?>)'>Voir le logement</button>
 
                     </div>
                             </div>
@@ -67,7 +75,7 @@ include $inc_path . "hebergement.php";
                 $m = $dbh->prepare($statement);
                 $m->execute();
                 while($r = $m->fetch()){*/
-                    
+            /*        
                 $collec = new hebergements($dbh);
                 for($i = 0; $i < $collec->getNbHebergs(); $i++){
         ?>
@@ -104,6 +112,7 @@ include $inc_path . "hebergement.php";
                 </div>
                 <?php 
                 }
+                */
                 ?>
 
             </div>
