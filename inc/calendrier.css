@@ -22,6 +22,7 @@ border: 1px solid black;
     margin-top: -23px;
 }
 td.inactif{
+<<<<<<< HEAD
     color:black;
     background: darkslategrey;
 }
@@ -35,6 +36,7 @@ td.today{
     background:green;
     border:solid 1px black;
 
+=======
     color:grey;
     background: rgba(0, 0, 0, 0.507);
 }
@@ -46,4 +48,5 @@ td.today{
     color:rgb(255, 255, 255);
     background:rgba(0, 0, 0, 0.459);
     border: 2px solid blue;
+>>>>>>> antho_temp
 }

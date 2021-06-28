@@ -31,7 +31,6 @@ include $inc_path . "hebergement.php";
 
                         while($gite = $allgites->fetch()){
                             ?>
-                            <p><?= $gite['lieu']?></p>
                             <div class="gite">
                                 <div class="photo">
 
@@ -68,6 +67,7 @@ include $inc_path . "hebergement.php";
                 $m = $dbh->prepare($statement);
                 $m->execute();
                 while($r = $m->fetch()){*/
+                    
                 $collec = new hebergements($dbh);
                 for($i = 0; $i < $collec->getNbHebergs(); $i++){
         ?>
